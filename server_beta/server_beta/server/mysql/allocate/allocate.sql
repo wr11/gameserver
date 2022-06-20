@@ -1,0 +1,16 @@
+DROP DATABASE if exists mytool_db;
+
+CREATE DATABASE mytool_db;
+USE mytool_db;
+
+CREATE TABLE test
+(
+	id VARCHAR(11) NOT NULL PRIMARY KEY,
+	test INT(10) NOT NULL COMMENT '测试'
+)ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT="测试";
+
+CREATE TABLE tbl_user
+(
+	phone_num VARCHAR(11) NOT NULL PRIMARY KEY,
+	data BLOB NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT="用户表";
